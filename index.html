@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/main.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">كيف يمكنني مساعدتك؟</p>
+      <div class="card">
+        <label>
+          طلب خدمة
+          <input
+            type="radio"
+            name="service"
+            id=""
+            data-link="/html/requestService.html"
+          />
+        </label>
+        <label>
+          ترتيب زيارة
+          <input type="radio" name="service" id="" data-link="/html/bookVisite.html" />
+        </label>
+        <label>
+          مكالمة هاتفية
+          <input type="radio" name="service" id="" data-link="/html/phonecall.html" />
+        </label>
+        <a href="#" id="next">التالي</ش>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
