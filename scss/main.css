@@ -4,6 +4,71 @@
   box-sizing: border-box;
 }
 
-body label {
+body {
+  height: 100vh;
+  width: 100vw;
+}
+body .container {
+  font-size: 30px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 24px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 2px lightgrey;
+}
+body .container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
+  gap: 13px;
+}
+body .container .card label {
   display: block;
+}
+body .container .card label input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid gray;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+body .container .card label input[type=radio]::after {
+  content: "";
+  display: block;
+  position: relative;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+body .container .card label input[type=radio]:checked {
+  border-color: rgb(2, 205, 205);
+}
+body .container .card label input[type=radio]:checked:after {
+  background-color: rgb(2, 205, 205);
+}
+body .container a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: aqua;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
 }/*# sourceMappingURL=main.css.map */

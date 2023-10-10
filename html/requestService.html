@@ -3,75 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/requestSerivce.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>طلب خدمة</h1>
-    <div class="steps">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-    <div class="slider">
-      <form class="form">
-        <div>
-          <input class="input" type="text" name="name" placeholder="الاسم" />
-          <input
-            class="input"
-            name="company name"
-            type="text"
-            placeholder="اسم الشركه"
-          />
-          <input
-            class="input"
-            name="phoneNumber"
-            type="text"
-            placeholder="رقم الهاتف"
-          />
-          <select class="fieldSelection input" name="field">
-            <option value="1">المجال</option>
-            <option value="2">المجال</option>
-            <option value="3">المجال</option>
-            <option value="4">المجال</option>
-          </select>
-          <input
-            class="input"
-            type="email"
-            placeholder="البريد الالكتروني"
-            name="email"
-          />
-          <select class="employeesNumber input" name="employeesNumber">
-            <option value="">عدد الموظفين</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <p>التالي</p>
-        </div>
-        <div>
-          <select class="input" name="serviceType" id="serviceType">
-            <option value="null">نوع الخدمة</option>
-            <option value="1">one</option>
-          </select>
-          <select name="revision-purpose" id="">
-            <option value="null">غرض المراجعه</option>
-            <option value="1">one</option>
-          </select>
-          <label for="invoice">
-            <input class="input" type="file" name="invoice" id="" />
+    <div class="container">
+      <h1>طلب خدمة</h1>
+      <div class="progress">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="slider">
+        <form class="form">
+          <div>
             <input
               class="input"
-              type="checkbox"
-              name="availablity"
-              id="isInvoice"
+              name="company name"
+              type="text"
+              placeholder="اسم الشركه"
             />
-          </label>
-        </div>
-        <button class="button">التالي</button>
-      </form>
+            <input class="input" type="text" name="name" placeholder="الاسم" />
+            <select class="fieldSelection input" name="field">
+              <option value="1">المجال</option>
+              <option value="2">المجال</option>
+              <option value="3">المجال</option>
+              <option value="4">المجال</option>
+            </select>
+            <input
+              class="input"
+              name="phoneNumber"
+              type="text"
+              placeholder="رقم الهاتف"
+            />
+            <select class="employeesNumber input" name="employeesNumber">
+              <option value="">عدد الموظفين</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <input
+              class="input"
+              type="email"
+              placeholder="البريد الالكتروني"
+              name="email"
+            />
+            <p>التالي</p>
+          </div>
+          <div>
+            <select class="input" name="serviceType" id="serviceType">
+              <option value="null">نوع الخدمة</option>
+              <option value="1">one</option>
+            </select>
+            <select name="revision-purpose" id="">
+              <option value="null">غرض المراجعه</option>
+              <option value="1">one</option>
+            </select>
+            <label for="invoice">
+              <input class="input" type="file" name="invoice" id="" />
+              <input
+                class="input"
+                type="checkbox"
+                name="availablity"
+                id="isInvoice"
+              />
+            </label>
+          </div>
+          <button class="button">التالي</button>
+        </form>
+      </div>
     </div>
+
     <script src="../js/reqService.js"></script>
   </body>
 </html>
