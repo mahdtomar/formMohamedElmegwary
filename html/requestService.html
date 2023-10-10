@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../scss/requestSerivce.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -70,17 +71,21 @@
                 <option value="1">one</option>
               </select>
               <label for="invoice">
-                <input class="input" type="file" name="invoice" id="" />
-                <input
-                  class="input"
-                  type="checkbox"
-                  name="availablity"
-                  id="isInvoice"
-                />
+                <div
+                  class="drag-area"
+                  ondrop="upload_file(event)"
+                  ondragover="return false"
+                >
+                  <p>اسقط الملف هنا او<img src="" alt="" /> انقر</p>
+
+                  <input type="file" name="file" id="file" hidden />
+                </div>
               </label>
             </div>
             <button class="button">التالي</button>
           </div>
+
+          <script src="script.js"></script>
         </form>
       </div>
     </div>

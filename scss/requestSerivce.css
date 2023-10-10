@@ -88,6 +88,34 @@ body .container .slider form div {
 body .container .slider form div:nth-child(2) {
   background-color: red;
 }
+body .container .slider form div:first-child {
+  /* 
+
+  @media (max-width: 745px) {
+
+    .drag-area button{
+      padding: 8px 20px;
+      font-size: 18px;
+      font-weight: 450;
+    }
+
+  .drag-area{
+    height: 400px;
+    width: 450px;
+  }
+
+  .drag-area header{
+    font-size: 25px;
+    font-weight: 450;
+    color: #fff;
+  }
+
+  .drag-area .icon{
+    font-size: 80px;
+  }
+
+  } */
+}
 body .container .slider form div:first-child div {
   position: relative;
   top: 0px;
@@ -117,7 +145,30 @@ body .container .slider form div:first-child div input:focus,
 body .container .slider form div:first-child div select:focus {
   outline: none;
 }
-body .container .slider form p {
+body .container .slider form div:first-child .drag-area {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  background-color: lightgray;
+}
+body .container .slider form div:first-child .drag-area.active {
+  background-color: rgb(183, 183, 183);
+}
+body .container .slider form div:first-child .drag-area header {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 500;
+}
+body .container .slider form div:first-child .drag-area img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+body .container .slider form > p {
   margin: 50px auto 0px;
   background-color: rgb(21, 176, 203);
   width: 90%;
