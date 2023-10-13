@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 2px lightgrey;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 70%;
+  padding: 24px;
+}
+.container .sub-container {
+  width: 100%;
+  display: block;
+  left: 110%;
+  width: 450px;
+}
+.container .sub-container header {
+  color: rgb(0, 11, 72);
+  text-align: right;
+  direction: rtl;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.container .sub-container div {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 15px;
+}
+.container .sub-container div input,
+.container .sub-container div select {
+  border: 3px solid rgb(21, 176, 203);
+  direction: rtl;
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: rgb(0, 11, 72);
+}
+.container .sub-container div input::-moz-placeholder, .container .sub-container div select::-moz-placeholder {
+  color: rgb(0, 11, 72);
+}
+.container .sub-container div input::placeholder,
+.container .sub-container div select::placeholder {
+  color: rgb(0, 11, 72);
+}
+.container .sub-container div input:focus,
+.container .sub-container div select:focus {
+  outline: none;
+}
+.container .sub-container p {
+  margin: 50px auto 0px;
+  background-color: rgb(21, 176, 203);
+  width: 90%;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 0px;
+}
+.container .second-form .grid-3 {
+  direction: rtl;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.container .second-form .grid-3 label {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+}
+.container .second-form .grid-3 label span {
+  font-size: 12px;
+  color: gray;
+}
+.container .second-form .grid-3 label select {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: lightgray;
+}
+.container .second-form .grid-3 label select:focus {
+  outline: none;
+}
+.container .second-form .grid-3 label.adress input {
+  display: block;
+  width: 100%;
+  background-color: lightgray;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
+}
+.container .second-form .grid-3 label.adress input:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+.container .second-form .grid-3 .adress,
+.container .second-form .grid-3 .reminder {
+  grid-column: 1/4;
+}
+.container .second-form .grid-3 .reminder {
+  background-color: white;
+}/*# sourceMappingURL=bookVisite.css.map */
