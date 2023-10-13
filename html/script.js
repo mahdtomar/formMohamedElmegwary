@@ -1,16 +1,15 @@
-//selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
-button = dropArea.querySelector("button"),
+button = dropArea.querySelector("p"),
 input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 var fileobj;
 
 
-button.onclick = ()=>{
+dropArea.addEventListener("click",()=>{
   input.click(); //if user click on the button then the input also clicked
   file_browse();
-}
+}) 
 
 input.addEventListener("change", function(){
   //getting user select file and [0] this means if user select multiple files then we'll select only the first one
@@ -74,21 +73,21 @@ function file_browse() {
 }
 
 
-function js_file_upload(file_obj) {
-    if(file_obj != undefined) {
-        var form_data = new FormData();                  
-        form_data.append('file', file_obj);
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "upload.php", true);
-        xhttp.onload = function(event) {
+// function js_file_upload(file_obj) {
+//     if(file_obj != undefined) {
+//         var form_data = new FormData();                  
+//         form_data.append('file', file_obj);
+//         var xhttp = new XMLHttpRequest();
+//         xhttp.open("POST", "upload.php", true);
+//         xhttp.onload = function(event) {
            
-            if (xhttp.status == 200) {
-                console.log("Uploaded!");
-            } else {
-               alert(xhttp.status);
-            }
-        }
+//             if (xhttp.status == 200) {
+//                 console.log("Uploaded!");
+//             } else {
+//                alert(xhttp.status);
+//             }
+//         }
  
-        xhttp.send(form_data);
-    }
-}
+//         xhttp.send(form_data);
+//     }
+// }

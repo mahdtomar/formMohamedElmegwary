@@ -62,21 +62,29 @@
           </div>
           <div>
             <div>
-              <select class="input" name="serviceType" id="serviceType">
-                <option value="null">نوع الخدمة</option>
-                <option value="1">one</option>
-              </select>
-              <select name="revision-purpose" id="">
-                <option value="null">غرض المراجعه</option>
-                <option value="1">one</option>
-              </select>
+              <label class="select-container">
+                <select class="input" name="serviceType" id="serviceType">
+                  <option value="null">نوع الخدمة</option>
+                  <option value="1">one</option>
+                </select>
+                <select name="revision-purpose" id="">
+                  <option value="null">غرض المراجعه</option>
+                  <option value="1">one</option>
+                </select></label
+              >
               <label for="invoice">
                 <div
                   class="drag-area"
                   ondrop="upload_file(event)"
                   ondragover="return false"
                 >
-                  <p>اسقط الملف هنا او<img src="" alt="" /> انقر</p>
+                  <p class="drop-text">
+                    اسقط الملف هنا او<img
+                      src="../icons/upload.png"
+                      alt="upload icon"
+                      class="upload_icon"
+                    />انقر
+                  </p>
 
                   <input type="file" name="file" id="file" hidden />
                 </div>
