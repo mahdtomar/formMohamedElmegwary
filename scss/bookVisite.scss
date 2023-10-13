@@ -63,11 +63,25 @@
   }
 
   .second-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    display: none;
+    header {
+      color: rgb(0, 11, 72);
+      text-align: right;
+      direction: rtl;
+      font-size: 32px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid rgb(21, 176, 203);
+      width: fit-content;
+    }
     .grid-3 {
       direction: rtl;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      width: 100%;
       label {
         background-color: lightgray;
         display: flex;
@@ -88,6 +102,9 @@
           &:focus {
             outline: none;
           }
+          option {
+            color: rgb(0, 11, 72);
+          }
         }
         &.adress {
           input {
@@ -103,6 +120,62 @@
             }
           }
         }
+        &.reminder {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          gap: 20px;
+          input {
+            appearance: none;
+            width: 40px;
+            height: 20px;
+            background-color: red;
+            border-radius: 100px;
+            position: relative;
+            &:focus {
+              outline: none;
+            }
+            &::after {
+              content: "";
+              width: 18px;
+              height: 18px;
+              border: 1px solid gray;
+              display: block;
+              border-radius: 50%;
+              background-color: mintcream;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              transform: translateX(0px);
+              transition: all 0.3s;
+            }
+            &::before {
+              content: "on";
+              height: 15px;
+              display: block;
+              position: absolute;
+              right: 100%;
+              top: 50%;
+              transform: translate(130%, -50%);
+              font-size: smaller;
+            }
+            &:checked {
+              background-color: blue;
+              &:after {
+                right: 100%;
+                transform: translateX(100%);
+              }
+              &::before {
+                content: "off";
+                display: block;
+                position: absolute;
+                right: 0%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
       }
       .adress,
       .reminder {
@@ -110,6 +183,19 @@
       }
       .reminder {
         background-color: white;
+      }
+      button {
+        margin: auto;
+        background-color: rgb(21, 176, 203);
+        width: 90%;
+        text-align: center;
+        color: white;
+        border-radius: 8px;
+        padding: 8px 0px;
+        border: none;
+        display: block;
+        grid-column: 1/4;
+        font-size: 18px;
       }
     }
   }

@@ -18,11 +18,11 @@
             placeholder="اسم الشركه"
           />
           <input class="input" type="text" name="name" placeholder="الاسم" />
-          <select class="fieldSelection input" name="field">
-            <option value="1">المجال</option>
-            <option value="2">المجال</option>
-            <option value="3">المجال</option>
-            <option value="4">المجال</option>
+          <select class="fieldSelection input firstSelect" name="field">
+            <option value="">المجال</option>
+            <option value="2">المجال الاول</option>
+            <option value="3">المجال الثاني</option>
+            <option value="4">المجال الثالث</option>
           </select>
           <input
             class="input"
@@ -30,7 +30,10 @@
             type="text"
             placeholder="رقم الهاتف"
           />
-          <select class="employeesNumber input" name="employeesNumber">
+          <select
+            class="employeesNumber input firstSelect"
+            name="employeesNumber"
+          >
             <option value="">عدد الموظفين</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -82,5 +85,6 @@
         </div>
       </div>
     </div>
+    <script src="../js/bookVisit.js" />
   </body>
 </html>

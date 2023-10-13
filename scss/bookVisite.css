@@ -68,11 +68,28 @@
   border-radius: 8px;
   padding: 8px 0px;
 }
+.container .second-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display: none;
+}
+.container .second-form header {
+  color: rgb(0, 11, 72);
+  text-align: right;
+  direction: rtl;
+  font-size: 32px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgb(21, 176, 203);
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .container .second-form .grid-3 {
   direction: rtl;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  width: 100%;
 }
 .container .second-form .grid-3 label {
   background-color: lightgray;
@@ -96,6 +113,9 @@
 .container .second-form .grid-3 label select:focus {
   outline: none;
 }
+.container .second-form .grid-3 label select option {
+  color: rgb(0, 11, 72);
+}
 .container .second-form .grid-3 label.adress input {
   display: block;
   width: 100%;
@@ -108,10 +128,81 @@
   outline: none;
   border-bottom: 1px solid gray;
 }
+.container .second-form .grid-3 label.reminder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.container .second-form .grid-3 label.reminder input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: red;
+  border-radius: 100px;
+  position: relative;
+}
+.container .second-form .grid-3 label.reminder input:focus {
+  outline: none;
+}
+.container .second-form .grid-3 label.reminder input::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 1px solid gray;
+  display: block;
+  border-radius: 50%;
+  background-color: mintcream;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transform: translateX(0px);
+  transition: all 0.3s;
+}
+.container .second-form .grid-3 label.reminder input::before {
+  content: "on";
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translate(130%, -50%);
+  font-size: smaller;
+}
+.container .second-form .grid-3 label.reminder input:checked {
+  background-color: blue;
+}
+.container .second-form .grid-3 label.reminder input:checked:after {
+  right: 100%;
+  transform: translateX(100%);
+}
+.container .second-form .grid-3 label.reminder input:checked::before {
+  content: "off";
+  display: block;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .container .second-form .grid-3 .adress,
 .container .second-form .grid-3 .reminder {
   grid-column: 1/4;
 }
 .container .second-form .grid-3 .reminder {
   background-color: white;
+}
+.container .second-form .grid-3 button {
+  margin: auto;
+  background-color: rgb(21, 176, 203);
+  width: 90%;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 0px;
+  border: none;
+  display: block;
+  grid-column: 1/4;
+  font-size: 18px;
 }/*# sourceMappingURL=bookVisite.css.map */
