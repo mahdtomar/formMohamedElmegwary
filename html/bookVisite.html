@@ -8,82 +8,86 @@
   </head>
   <body>
     <div class="container">
-      <div class="sub-container">
-        <header>ترتيب زيارة</header>
-        <div>
-          <input
-            class="input"
-            name="company name"
-            type="text"
-            placeholder="اسم الشركه"
-          />
-          <input class="input" type="text" name="name" placeholder="الاسم" />
-          <select class="fieldSelection input firstSelect" name="field">
-            <option value="">المجال</option>
-            <option value="2">المجال الاول</option>
-            <option value="3">المجال الثاني</option>
-            <option value="4">المجال الثالث</option>
-          </select>
-          <input
-            class="input"
-            name="phoneNumber"
-            type="text"
-            placeholder="رقم الهاتف"
-          />
-          <select
-            class="employeesNumber input firstSelect"
-            name="employeesNumber"
-          >
-            <option value="">عدد الموظفين</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <input
-            class="input"
-            type="email"
-            placeholder="البريد الالكتروني"
-            name="email"
-          />
+      <form action="">
+        <div class="sub-container">
+          <header>ترتيب زيارة</header>
+          <div>
+            <input
+              class="input"
+              name="company name"
+              type="text"
+              placeholder="اسم الشركه"
+            />
+            <input class="input" type="text" name="name" placeholder="الاسم" />
+            <select class="fieldSelection input firstSelect" name="field">
+              <option value="">المجال</option>
+              <option value="2">المجال الاول</option>
+              <option value="3">المجال الثاني</option>
+              <option value="4">المجال الثالث</option>
+            </select>
+            <input
+              class="input"
+              name="phoneNumber"
+              type="text"
+              placeholder="رقم الهاتف"
+            />
+            <select
+              class="employeesNumber input firstSelect"
+              name="employeesNumber"
+            >
+              <option value="">عدد الموظفين</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <input
+              class="input"
+              type="email"
+              placeholder="البريد الالكتروني"
+              name="email"
+            />
+          </div>
+          <p class="forward">التالي</p>
         </div>
-        <p>التالي</p>
-      </div>
-      <div class="second-form">
-        <header>ترتيب زيارة</header>
-        <div class="grid-3">
-          <label for="">
-            <select name="date" id="">
-              <option value="1">jan</option>
-            </select>
-            <span>التاريخ</span>
-          </label>
-          <label for="">
-            <select name="time" id="">
-              <option value="1">one</option>
-              <option value="2">two</option>
-              <option value="3">three</option>
-            </select>
-            <span>الوقت</span>
-          </label>
-          <label for="">
-            <select name="duration" id="">
-              <option value="1">one</option>
-              <option value="2">two</option>
-              <option value="3">three</option>
-            </select>
-            <span>المدة</span>
-          </label>
-          <label for="" class="adress"
-            ><input type="text" /><span>العنوان</span></label
-          >
-          <label for="" class="reminder"
-            ><input type="checkbox" />تنبية قبل الموعد بساعتين</label
-          >
-          <button>التالي</button>
+        <div class="second-form">
+          <header>ترتيب زيارة</header>
+          <div class="grid-3">
+            <label for="">
+              <input type="date" class="date-input" />
+              <span>التاريخ</span>
+            </label>
+            <label for="">
+              <select name="time" id="">
+                <option value="">اختر الوقت</option>
+                <option value="1">one</option>
+                <option value="2">two</option>
+                <option value="3">three</option>
+              </select>
+              <span>الوقت</span>
+            </label>
+            <label for="">
+              <select name="duration" id="">
+                <option value="">اختر المدة</option>
+                <option value="1">one</option>
+                <option value="2">two</option>
+                <option value="3">three</option>
+              </select>
+              <span>المدة</span>
+            </label>
+            <label for="" class="adress"
+              ><input type="text" class="adress-input" /><span
+                >العنوان</span
+              ></label
+            >
+            <label for="" class="reminder"
+              ><input type="checkbox" />تنبية قبل الموعد بساعتين</label
+            >
+            <button>التالي</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <script src="../js/bookVisit.js" />
   </body>

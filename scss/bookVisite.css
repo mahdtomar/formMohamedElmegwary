@@ -19,7 +19,7 @@
 }
 .container .sub-container {
   width: 100%;
-  display: block;
+  display: none;
   left: 110%;
   width: 450px;
 }
@@ -59,6 +59,10 @@
 .container .sub-container div select:focus {
   outline: none;
 }
+.container .sub-container div input.req,
+.container .sub-container div select.req {
+  border-color: red;
+}
 .container .sub-container p {
   margin: 50px auto 0px;
   background-color: rgb(21, 176, 203);
@@ -72,7 +76,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  display: none;
 }
 .container .second-form header {
   color: rgb(0, 11, 72);
@@ -99,6 +102,12 @@
   justify-content: center;
   padding: 12px;
   border-radius: 8px;
+}
+.container .second-form .grid-3 label.req span {
+  color: red;
+}
+.container .second-form .grid-3 label.req.adress input {
+  border-bottom-color: red;
 }
 .container .second-form .grid-3 label span {
   font-size: 12px;
@@ -140,7 +149,7 @@
           appearance: none;
   width: 40px;
   height: 20px;
-  background-color: red;
+  background-color: rgb(21, 176, 203);
   border-radius: 100px;
   position: relative;
 }
@@ -172,7 +181,7 @@
   font-size: smaller;
 }
 .container .second-form .grid-3 label.reminder input:checked {
-  background-color: blue;
+  background-color: lightgray;
 }
 .container .second-form .grid-3 label.reminder input:checked:after {
   right: 100%;
@@ -185,6 +194,30 @@
   right: 0%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.container .second-form .grid-3 label .date-input {
+  background-color: lightgray;
+  border: none;
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  position: relative;
+  width: 100%;
+}
+.container .second-form .grid-3 label .date-input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+.container .second-form .grid-3 label .date-input:focus {
+  outline: none;
 }
 .container .second-form .grid-3 .adress,
 .container .second-form .grid-3 .reminder {
