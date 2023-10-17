@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 2px lightgrey;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 70%;
+  padding: 24px;
+}
+.container form .main-info {
+  width: 100%;
+  left: 110%;
+  display: block;
+  width: 450px;
+}
+.container form .main-info header {
+  color: rgb(0, 11, 72);
+  text-align: right;
+  direction: rtl;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.container form .main-info div {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 15px;
+}
+.container form .main-info div input,
+.container form .main-info div select {
+  border: 3px solid rgb(21, 176, 203);
+  direction: rtl;
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: rgb(0, 11, 72);
+}
+.container form .main-info div input::-moz-placeholder, .container form .main-info div select::-moz-placeholder {
+  color: rgb(0, 11, 72);
+}
+.container form .main-info div input::placeholder,
+.container form .main-info div select::placeholder {
+  color: rgb(0, 11, 72);
+}
+.container form .main-info div input:focus,
+.container form .main-info div select:focus {
+  outline: none;
+}
+.container form .main-info div input.req,
+.container form .main-info div select.req {
+  border-color: red;
+}
+.container form .main-info p {
+  margin: 50px auto 0px;
+  background-color: rgb(21, 176, 203);
+  width: 90%;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 0px;
+}
+.container form .phone-number {
+  display: none;
+}
+.container form .phone-number header {
+  color: rgb(0, 11, 72);
+  text-align: right;
+  direction: rtl;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.container form .phone-number label {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 50px auto;
+}
+.container form .phone-number label.req span {
+  color: red;
+}
+.container form .phone-number label.req.phone input {
+  border-bottom-color: red;
+}
+.container form .phone-number label input {
+  display: block;
+  width: 100%;
+  background-color: lightgray;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
+  font-size: 22px;
+}
+.container form .phone-number label input:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+.container form .phone-number label span {
+  font-size: 12px;
+  color: gray;
+}
+.container form .phone-number button {
+  margin: auto;
+  background-color: rgb(21, 176, 203);
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 0px;
+  border: none;
+  display: block;
+  grid-column: 1/4;
+  font-size: 18px;
+}/*# sourceMappingURL=phonecall.css.map */
