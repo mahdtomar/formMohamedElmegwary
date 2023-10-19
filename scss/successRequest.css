@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 2px lightgrey;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 70%;
+}
+.container > div {
+  padding: 24px;
+}
+.container .confirmation {
+  color: rgb(0, 11, 72);
+}
+.container .confirmation img {
+  display: block;
+  margin: auto;
+}
+.container .confirmation p {
+  text-align: center;
+  margin: 20px auto;
+}
+.container .confirmation p:nth-child(2) {
+  font-weight: bold;
+  font-size: 30px;
+}
+.container .confirmation p:nth-child(3) {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+}
+.container .code {
+  border-bottom: 2px dashed gray;
+}
+.container .code .flex-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0px 0px 5px 1px lightgrey;
+  padding: 20px 10px;
+}
+.container .code .flex-2 .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .code .flex-2 .details p {
+  direction: rtl;
+  color: gray;
+  font-size: small;
+}
+.container .code .flex-2 .details p span {
+  display: block;
+  color: rgb(0, 11, 72);
+  font-weight: bold;
+}
+.container .details .order_details {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.container .details .order_details div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .details .order_details div p {
+  color: gray;
+  direction: rtl;
+  text-align: center;
+}
+.container .details .order_details div p span {
+  display: block;
+  color: rgb(0, 11, 72);
+  font-weight: bold;
+}
+.container .details .options {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .details .options button {
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 8px 0px;
+  border: 2px solid;
+  background-color: white;
+  color: gray;
+  border-color: gray;
+  width: 100px;
+}
+.container .details .options button:first-child {
+  color: white;
+  background-color: rgb(21, 176, 203);
+  border-color: rgb(21, 176, 203);
+}/*# sourceMappingURL=successRequest.css.map */
