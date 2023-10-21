@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 body {
   height: 100vh;
@@ -29,6 +29,16 @@ body {
       justify-content: space-between;
       position: relative;
       flex-direction: row-reverse;
+      &.two {
+        &::before {
+          background-color: rgb(21, 176, 203);
+        }
+      }
+      &.three {
+        &::after {
+          background-color: rgb(21, 176, 203);
+        }
+      }
       div {
         width: 50px;
         height: 50px;
@@ -37,7 +47,7 @@ body {
         display: grid;
         place-items: center;
         color: lightgray;
-        &:first-child {
+        &.active {
           border-color: rgb(21, 176, 203);
           color: rgb(0, 11, 72);
         }
@@ -82,6 +92,9 @@ body {
           display: block;
           left: 110%;
           width: 450px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
           &:nth-child(2) {
             .select-container {
               display: grid;
@@ -101,10 +114,16 @@ body {
                 &:focus {
                   outline: none;
                 }
+                &.req {
+                  border-color: red;
+                }
               }
             }
           }
           &:first-child {
+            .invoice {
+              display: none;
+            }
             div {
               position: relative;
               top: 0px;
@@ -127,6 +146,9 @@ body {
                 &:focus {
                   outline: none;
                 }
+                &.req {
+                  border-color: red;
+                }
                 option {
                   border: 3px solid rgb(21, 176, 203);
                   direction: rtl;
@@ -147,6 +169,11 @@ body {
               display: flex;
               align-items: center;
               justify-content: center;
+              &.req {
+                p {
+                  color: red;
+                }
+              }
               .drop-text {
                 display: flex;
                 align-items: center;
@@ -166,8 +193,8 @@ body {
                 font-weight: 500;
               }
               > img {
-                height: 100%;
-                width: 100%;
+                height: 50px;
+                width: fit-content;
                 object-fit: cover;
                 border-radius: 5px;
               }
@@ -183,7 +210,8 @@ body {
           border-radius: 8px;
           padding: 8px 0px;
         }
-        button {
+        button,
+        .nextBtn {
           display: block;
           width: 100%;
           background-color: rgb(21, 176, 203);
@@ -191,6 +219,10 @@ body {
           color: white;
           padding: 8px 0px;
           border-radius: 8px;
+        }
+        .nextBtn {
+          text-align: center;
+          margin: 20px auto;
         }
       }
     }

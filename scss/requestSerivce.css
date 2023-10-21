@@ -34,6 +34,12 @@ body .container .progress {
   position: relative;
   flex-direction: row-reverse;
 }
+body .container .progress.two::before {
+  background-color: rgb(21, 176, 203);
+}
+body .container .progress.three::after {
+  background-color: rgb(21, 176, 203);
+}
 body .container .progress div {
   width: 50px;
   height: 50px;
@@ -43,7 +49,7 @@ body .container .progress div {
   place-items: center;
   color: lightgray;
 }
-body .container .progress div:first-child {
+body .container .progress div.active {
   border-color: rgb(21, 176, 203);
   color: rgb(0, 11, 72);
 }
@@ -85,6 +91,9 @@ body .container .slider form div {
   display: block;
   left: 110%;
   width: 450px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 body .container .slider form div:nth-child(2) .select-container {
   display: grid;
@@ -108,6 +117,12 @@ body .container .slider form div:nth-child(2) .select-container select::placehol
 }
 body .container .slider form div:nth-child(2) .select-container select:focus {
   outline: none;
+}
+body .container .slider form div:nth-child(2) .select-container select.req {
+  border-color: red;
+}
+body .container .slider form div:first-child .invoice {
+  display: none;
 }
 body .container .slider form div:first-child div {
   position: relative;
@@ -138,6 +153,10 @@ body .container .slider form div:first-child div input:focus,
 body .container .slider form div:first-child div select:focus {
   outline: none;
 }
+body .container .slider form div:first-child div input.req,
+body .container .slider form div:first-child div select.req {
+  border-color: red;
+}
 body .container .slider form div:first-child div input option,
 body .container .slider form div:first-child div select option {
   border: 3px solid rgb(21, 176, 203);
@@ -158,6 +177,9 @@ body .container .slider form div:first-child .drag-area {
   align-items: center;
   justify-content: center;
 }
+body .container .slider form div:first-child .drag-area.req p {
+  color: red;
+}
 body .container .slider form div:first-child .drag-area .drop-text {
   display: flex;
   align-items: center;
@@ -177,8 +199,9 @@ body .container .slider form div:first-child .drag-area header {
   font-weight: 500;
 }
 body .container .slider form div:first-child .drag-area > img {
-  height: 100%;
-  width: 100%;
+  height: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -192,7 +215,8 @@ body .container .slider form > p {
   border-radius: 8px;
   padding: 8px 0px;
 }
-body .container .slider form button {
+body .container .slider form button,
+body .container .slider form .nextBtn {
   display: block;
   width: 100%;
   background-color: rgb(21, 176, 203);
@@ -200,4 +224,8 @@ body .container .slider form button {
   color: white;
   padding: 8px 0px;
   border-radius: 8px;
+}
+body .container .slider form .nextBtn {
+  text-align: center;
+  margin: 20px auto;
 }/*# sourceMappingURL=requestSerivce.css.map */

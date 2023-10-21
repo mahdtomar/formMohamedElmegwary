@@ -37,7 +37,7 @@ nextBtn.addEventListener("click", () => {
 formBtn.addEventListener("click", (e) => {
   let secondInput = 0;
   secondFormInput.forEach((input) => {
-    console.log(input.value.length)
+    console.log(input.value.length);
     if (input.value.length === 13) {
       secondInput += 1;
       input.parentElement.classList.remove("req");

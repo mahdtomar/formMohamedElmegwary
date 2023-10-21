@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../scss/requestSerivce.css" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>طلب خدمة</h1>
       <div class="progress">
-        <div>1</div>
+        <div class="active">1</div>
         <div>2</div>
         <div>3</div>
       </div>
       <div class="slider">
-        <form class="form">
-          <div>
+        <form action="./requestServiceSuccess.html" class="form">
+          <div class="first-part">
             <div>
               <input
                 class="input"
@@ -35,10 +38,10 @@
                 placeholder="الاسم"
               />
               <select class="fieldSelection input" name="field">
-                <option value="1">المجال</option>
-                <option value="2">المجال</option>
-                <option value="3">المجال</option>
-                <option value="4">المجال</option>
+                <option value="">المجال</option>
+                <option value="1">المجال الاول</option>
+                <option value="2">المجال الثاني</option>
+                <option value="3">المجال الثالث</option>
               </select>
               <input
                 class="input"
@@ -61,21 +64,21 @@
                 name="email"
               />
             </div>
-            <p>التالي</p>
+            <p class="nextBtn">التالي</p>
           </div>
-          <div>
+          <div class="second-part">
             <div>
               <label class="select-container">
                 <select class="input" name="serviceType" id="serviceType">
-                  <option value="null">نوع الخدمة</option>
+                  <option value="">نوع الخدمة</option>
                   <option value="1">one</option>
                 </select>
                 <select name="revision-purpose" id="">
-                  <option value="null">غرض المراجعه</option>
+                  <option value="">غرض المراجعه</option>
                   <option value="1">one</option>
                 </select></label
               >
-              <label for="invoice">
+              <label for="invoice" class="invoice">
                 <div
                   class="drag-area"
                   ondrop="upload_file(event)"

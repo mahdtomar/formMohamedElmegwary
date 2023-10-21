@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .container {
@@ -18,7 +18,7 @@
   padding: 24px;
   .sub-container {
     width: 100%;
-    display: none;
+    display: block;
     left: 110%;
     width: 450px;
     header {
@@ -70,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // display: none;
+    display: none;
     header {
       color: rgb(0, 11, 72);
       text-align: right;
